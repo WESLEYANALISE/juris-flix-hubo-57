@@ -70,6 +70,7 @@ const getUniqueIconForFunction = (funcao: string, index: number) => {
   if (name.includes('banco') || name.includes('dados')) return Database;
   if (name.includes('questões') || name.includes('questao') || name.includes('questão')) return Target; // Alterado para alvo
   if (name.includes('dicionário') || name.includes('dicionario')) return Search; // Alterado para lupa
+  if (name.includes('indicações') || name.includes('indicacao') || name.includes('livros')) return Star; // Ícone estrela para indicações
   
   // Se não encontrar correspondência específica, usa um ícone único baseado no índice
   return availableIcons[index % availableIcons.length] || Scale;

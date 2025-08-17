@@ -10,8 +10,8 @@ import { supabase } from '@/integrations/supabase/client';
 const categoriesConfig = {
   'Biblioteca e Leitura': {
     color: 'emerald',
-    functions: [1, 3, 2, 20],
-    // Vade Mecum, Biblioteca, Downloads, Biblioteca de Clássicos
+    functions: [1, 3, 2, 20, 24],
+    // Vade Mecum, Biblioteca, Downloads, Biblioteca de Clássicos, Indicações de Livros
     gradient: 'from-emerald-500 to-green-600'
   },
   'Estudos e Aprendizado': {
@@ -63,6 +63,7 @@ const getIconForFunction = (funcao: string, id: number) => {
   if (id === 15 || name.includes('dicionário') || name.includes('dicionario')) return Search;
   if (id === 2 || name.includes('download') || name.includes('baixar')) return Download;
   if (id === 20 || name.includes('biblioteca') && name.includes('clássicos')) return BookOpen;
+  if (id === 24 || name.includes('indicações') || name.includes('indicacao') || name.includes('livros')) return Star;
   return BookOpen; // ícone padrão
 };
 export const FeaturesGrid = () => {
@@ -220,6 +221,25 @@ export const FeaturesGrid = () => {
                     <div className="text-left">
                       <h3 className="text-lg font-semibold">Biblioteca de Habilidades Pessoais</h3>
                       <p className="text-white/80 text-sm">Desenvolvimento pessoal e profissional</p>
+                    </div>
+                  </div>
+                </button>
+
+                {/* Indicações de Livros */}
+                <button
+                  onClick={() => {
+                    handleFunctionClick('Indicações de Livros');
+                    setIsDialogOpen(false);
+                  }}
+                  className="group relative overflow-hidden bg-gradient-to-r from-amber-500 to-orange-600 hover:from-amber-600 hover:to-orange-700 text-white p-6 rounded-xl transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
+                >
+                  <div className="flex items-center gap-4">
+                    <div className="w-12 h-12 rounded-lg bg-primary flex items-center justify-center">
+                      <Star className="w-6 h-6 text-primary-foreground" />
+                    </div>
+                    <div className="text-left">
+                      <h3 className="text-lg font-semibold">Indicações de Livros</h3>
+                      <p className="text-white/80 text-sm">Leituras obrigatórias e recomendadas</p>
                     </div>
                   </div>
                 </button>
