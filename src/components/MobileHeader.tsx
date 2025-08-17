@@ -57,7 +57,7 @@ export const MobileHeader = ({
                 )} />
                 
                 {unreadCount > 0 && (
-                  <span className="absolute -top-1 -right-1 h-5 w-5 rounded-full bg-gradient-to-br from-red-500 to-red-600 flex items-center justify-center text-white text-xs font-bold min-w-[20px] shadow-lg border-2 border-background animate-bounce">
+                  <span className="absolute -top-2 -right-2 h-6 w-auto min-w-[24px] px-1 rounded-full bg-gradient-to-br from-red-500 to-red-600 flex items-center justify-center text-white text-xs font-bold shadow-lg border-2 border-background animate-bounce">
                     {unreadCount > 99 ? '99+' : unreadCount}
                   </span>
                 )}
