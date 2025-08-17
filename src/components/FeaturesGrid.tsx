@@ -150,7 +150,8 @@ export const FeaturesGrid = () => {
   return <div className="py-12 sm:py-16 px-4 md:px-8">
       <div className="max-w-7xl mx-auto">
         {/* Botões destacados redesenhados com design profissional */}
-        <div className="flex flex-row justify-center items-center gap-2 sm:gap-4 mb-16 animate-fade-in px-2 sm:px-4">
+        <div className="flex flex-col justify-center items-center gap-4 mb-16 animate-fade-in px-2 sm:px-4">
+          <div className="flex flex-row justify-center items-center gap-2 sm:gap-4">
           {/* Botão Explorar Biblioteca - Design profissional com Modal */}
           <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
             <DialogTrigger asChild>
@@ -256,6 +257,19 @@ export const FeaturesGrid = () => {
               <Newspaper className="w-5 h-5 sm:w-8 sm:h-8 text-white icon-hover-bounce" />
             </div>
             <span className="font-medium text-sm sm:text-lg">Notícias Comentadas</span>
+            <ArrowRight className="w-3 h-3 sm:w-5 sm:h-5 text-white/80 group-hover:text-white group-hover:translate-x-1 transition-all duration-300" />
+          </button>
+          </div>
+
+          {/* Botão Indicações de Livros - Separado */}
+          <button 
+            onClick={() => handleFunctionClick('Indicações de Livros')}
+            className="group relative overflow-hidden bg-gradient-to-r from-amber-500 to-orange-600 hover:from-amber-600 hover:to-orange-700 text-white px-3 sm:px-6 py-4 sm:py-6 rounded-xl font-semibold text-sm sm:text-lg shadow-xl hover:shadow-2xl hover:shadow-amber-500/25 transform hover:scale-[1.02] transition-all duration-500 flex items-center gap-2 sm:gap-3 sm:min-w-[220px] justify-center border border-amber-500/20"
+          >
+            <div className="w-8 h-8 sm:w-12 sm:h-12 rounded-lg bg-white/15 backdrop-blur-sm flex items-center justify-center group-hover:bg-white/25 transition-all duration-300">
+              <Star className="w-5 h-5 sm:w-8 sm:h-8 text-white icon-hover-bounce" />
+            </div>
+            <span className="font-medium text-sm sm:text-lg">Indicações de Livros</span>
             <ArrowRight className="w-3 h-3 sm:w-5 sm:h-5 text-white/80 group-hover:text-white group-hover:translate-x-1 transition-all duration-300" />
           </button>
         </div>
