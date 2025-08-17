@@ -2014,6 +2014,36 @@ export type Database = {
         }
         Relationships: []
       }
+      "LIVROS-INDICACAO": {
+        Row: {
+          audio: string | null
+          Autor: string | null
+          capa: string | null
+          Download: string | null
+          id: number
+          Sobre: string | null
+          Titulo: string | null
+        }
+        Insert: {
+          audio?: string | null
+          Autor?: string | null
+          capa?: string | null
+          Download?: string | null
+          id?: number
+          Sobre?: string | null
+          Titulo?: string | null
+        }
+        Update: {
+          audio?: string | null
+          Autor?: string | null
+          capa?: string | null
+          Download?: string | null
+          id?: number
+          Sobre?: string | null
+          Titulo?: string | null
+        }
+        Relationships: []
+      }
       mapas: {
         Row: {
           conteudo: string
